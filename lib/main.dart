@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:logger/logger.dart';
 import 'dart:async'; // Add Timer import
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'models/device.dart';
 import 'services/app_state.dart';
 import 'screens/admin_dashboard.dart';
@@ -26,9 +27,12 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   try {
+    // Load environment variables from .env file
+    await dotenv.load();
+
     await Supabase.initialize(
-      url: SupabaseConfig.url,
-      anonKey: SupabaseConfig.anonKey,
+      url: SupabaseConfig.supabaseUrl,
+      anonKey: SupabaseConfig.supabaseAnonKey,
     );
 
     runApp(
