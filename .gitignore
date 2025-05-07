@@ -32,7 +32,7 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
-./config/supabase_config.dart
+config/supabase_config.dart
 # Symbolication related
 app.*.symbols
 
