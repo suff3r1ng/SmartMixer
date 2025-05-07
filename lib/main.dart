@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'SmartMix',
+      title: 'SmartMixer',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -257,7 +257,7 @@ class _AuthPageState extends State<AuthPage> {
                   ),
                   SizedBox(height: 16),
                   Text(
-                    'SmartMix',
+                    'SmartMixer',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 28,
